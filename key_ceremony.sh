@@ -14,7 +14,7 @@ key_length=${3:-2048}
 days=${4:-1825}
 
 echo "Generating $1 keys..."
-for ((i=0; i <= $number_key; i++))
+for ((i=0; i < $number_key; i++))
 do
   prefix=$(date +'%Y%m%d%H%M%S')
   file="${prefix}_cert_${i}"
